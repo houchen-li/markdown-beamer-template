@@ -1,19 +1,19 @@
 ---
 output:
     beamer_presentation:
-        pdf_engine: 'xelatex'
-        path: './main.pdf'
+        pdf_engine: "xelatex"
+        path: "./main.pdf"
         includes:
-            in_header: 'header.tex'
-            before_body: 'doc_prefix.tex'
-            after_body: 'doc_suffix.tex'
-        pandoc_args:
-        - '--filter=pandoc-crossref'
+            in_header: "header.tex"
+            before_body: "doc_prefix.tex"
+            after_body: "doc_suffix.tex"
+#        pandoc_args:
+#            - "--filter=pandoc-crossref"
 export_on_save:
     pandoc: true
 ################################################
-theme: Madrid
-colortheme: orchid
+theme: metropolis
+#colortheme: orchid
 aspectratio: 169
 #section-titles: false
 lang: en-US
@@ -22,40 +22,51 @@ lang: en-US
 #- 'right=1in'
 #- 'top=1.2in'
 #- 'bottom=1.2in'
-fontenc: 'T1'
-fontsize: '10pt'
+#fontenc: 'T1' % Redundant with fontspec + XeLaTeX
+fontsize: "10pt"
 mainfont: NewComputerModern
 mainfontoptions:
-- 'Extension=.otf'
-- 'UprightFont=NewCM10-Regular'
-- 'BoldFont=NewCM10-Bold'
-- 'ItalicFont=NewCM10-Italic'
-- 'BoldItalicFont=NewCM10-BoldItalic'
-CJKmainfont: 'Source Han Serif CN'
+    - "Path=fonts/"
+    - "Extension=.otf"
+    - "UprightFont=NewCM10-Regular"
+    - "BoldFont=NewCM10-Bold"
+    - "ItalicFont=NewCM10-Italic"
+    - "BoldItalicFont=NewCM10-BoldItalic"
+sansfont: NewComputerModernSans
+sansfontoptions:
+    - "Path=fonts/"
+    - "Extension=.otf"
+    - "UprightFont=NewCMSans10-Regular"
+    - "BoldFont=NewCMSans10-Bold"
+    - "ItalicFont=NewCMSans10-Oblique"
+    - "BoldItalicFont=NewCMSans10-BoldOblique"
+mathfont: "NewCMMath-Regular.otf"
+mathfontoptions:
+    - "Path=fonts/"
+CJKmainfont: "SourceHanSerifSC-Regular.otf"
 CJKoptions:
-- 'Extension=.otf'
-- 'UprightFont=SourceHanSerifCN-Regular'
-- 'BoldFont=SourceHanSerifCN-Bold'
-- 'ItalicFont=ukai.ttc'
+    - "Path=fonts/"
+    - "BoldFont=SourceHanSerifSC-Bold.otf"
+    - "ItalicFont=ukai.ttc"
 #- 'BoldItalicFont='
-linestretch: '1.25'
+linestretch: "1.25"
 indent: true
 toc: true
 #toc-title: 'Contents'
 #toc-depth: 3
 numbersections: false
 hyperrefoptions:
-- 'linktoc=all'
+    - "linktoc=all"
 bibliography:
-- 'refs/bibliography.bib'
-csl: 'refs/american-physics-society.csl'
+    - "refs/bibliography.bib"
+csl: "refs/american-physics-society.csl"
 ################################################
-title: 'Quantum Mechanics'
+title: "Quantum Mechanics"
 author:
-- 'Wikipedia'
+    - "Wikipedia"
 institute:
-- 'Fachbereich Physik, Philipps-Universität Marburg'
-date: 'May 16th, 2020'
+    - "Fachbereich Physik, Philipps-Universität Marburg"
+date: "May 16th, 2020"
 ---
 
 # Introduction
@@ -74,16 +85,14 @@ According to Planck, each energy element (E) is proportional to its frequency (\
 \[E=h\nu,\] {#eq:photon-energy}
 where h is Planck's constant.
 
-
 # Methods
 
 ---
 
-* quantization of certain physical properties
-* quantum entanglement
-* principle of uncertainty
-* wave–particle duality
-
+- quantization of certain physical properties
+- quantum entanglement
+- principle of uncertainty
+- wave–particle duality
 
 # Results
 
@@ -91,13 +100,11 @@ where h is Planck's constant.
 
 ![Wavefunctions of the electron in a hydrogen atom at different energy levels. Quantum mechanics cannot predict the exact location of a particle in space, only the probability of finding it at different locations. The brighter areas represent a higher probability of finding the electron.](figures/Hydrogen_Density_Plots.png){width=40%}
 
-
 # Conclusion
 
 ---
 
 In light of the Bell tests, Cramer in 1986 formulated his transactional interpretation which is unique in providing a physical explanation for the Born rule. Relational quantum mechanics appeared in the late 1990s as the modern derivative of the Copenhagen Interpretation.
-
 
 # Reference {.allowframebreaks}
 
